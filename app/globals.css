@@ -41,7 +41,7 @@ header {
   font-size: 35px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .navbar {
@@ -49,7 +49,7 @@ header {
 }
 
 .navbar a {
-  color: var(--bg-color);
+  color: var(--text-color);
   font-size: var(--p-font);
   font-weight: 500;
   padding: 10px 22px;
@@ -65,7 +65,7 @@ header {
 }
 
 #menu-icon {
-  color: var(--bg-color);
+  color: var(--text-color);
   font-size: 35px;
   z-index: 10001;
   cursor: pointer;
@@ -80,7 +80,7 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('/bg1.jpg');
+  background: url('/bg2.jpg');
   background-size: cover;
   background-position: center;
   display: grid;
@@ -132,6 +132,40 @@ header.sticky {
 
 .sticky .navbar a {
   color: var(--text-color);
+}
+
+.title {
+  text-align: center;
+}
+
+.title h2 {
+  font-size: var(--h2-font);
+  line-height: 1.2;
+}
+
+.package-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.thum {
+  position: relative;
+  transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  will-change: filter;
+  cursor: pointer;
+}
+
+.thum:hover {
+  filter: brightness(100%) hue-rotate(45deg);
+  transform: scale(1.04);
+}
+
+.thum img {
+  width: 100%;
+  height: auto;
 }
 
 #contact {
@@ -211,4 +245,78 @@ header.sticky {
   color: var(--bg-color);
   font-size: 14px;
   letter-spacing: 2px;
+}
+
+@media (max-width: 1400px) {
+  header {
+    padding: 17px 3%;
+    transition: .3s;
+  }
+  header.sticky {
+    padding: 10px 3%;
+    transition: .2s;
+  }
+  section {
+    padding: 80px 3%;
+    transition: .2s;
+  }
+  :root {
+    --big-font: 4.5rem;
+    --h2-font: 2.3rem;
+    --p-font: 1rem;
+    transition: .2s;
+  }
+}
+
+@media (max-width: 1040px) {
+  #menu-icon {
+    display: block;
+  }
+  .home {
+    height: 70vh;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 270px;
+    height: 120vh;
+    background: #1067cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 30px;
+    transition: 0.5s all;
+  }
+  .navbar a {
+    display: block;
+    margin: 1.2rem 0;
+  }
+  .sticky .navbar a {
+    color: var(--bg-color);
+  }
+  .navbar a:hover {
+    color: var(--text-color);
+  }
+  .open {
+    right: 0;
+  }
+  .list {
+    width: 50%;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .list {
+    width: 100%;
+  }
+  :root {
+    --big-font: 3.8rem;
+    --h2-font: 1.8rem;
+    transition: .2s;
+  }
+  .home {
+    height: 65vh;
+  }
 }

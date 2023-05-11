@@ -2,7 +2,7 @@ export default function HomeSection() {
   return (
     <section className="home" id="home">
       <div className="home-text">
-        <h1>
+        {/* <h1>
           Athviha <br /> Tours
         </h1>
         <p>
@@ -10,7 +10,7 @@ export default function HomeSection() {
         </p>
         <a href="#contact" className="home-btn">
           Let&apos;s go now
-        </a>
+        </a> */}
       </div>
     </section>
   );

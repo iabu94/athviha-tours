@@ -24,14 +24,19 @@ export default function Header() {
 
   return (
     <header className={isSticky ? "sticky" : ""}>
-      <a href="#" className="logo">
-        Athviha
-      </a>
-      <div className="bx bx-menu" id="menu-icon"></div>
+      <a href="#" className="logo"></a>
+      <div
+        className={isOpen ? "bx bx-menu " : "bx bx-x "}
+        id="menu-icon"
+        onClick={() => setIsOpen(!isOpen)}
+      ></div>
 
-      <ul className="navbar">
+      <ul className={"navbar " + (isOpen ? "open " : "")}>
         <li>
           <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#package">Specialities</a>
         </li>
         <li>
           <a href="#contact">Contact Us</a>
