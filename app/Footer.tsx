@@ -8,6 +8,7 @@ export default function Footer() {
   const twitterLink = process.env.TWITTER_LINK;
   const linkedinLink = process.env.LINKEDIN_LINK;
   const contactNo = process.env.CONTACT_NO;
+  const contactNoTitle = process.env.CONTACT_NO_TITLE;
 
   return (
     <section id="contact">
@@ -44,7 +45,7 @@ export default function Footer() {
                 <a href="#home">{address}</a>
               </li>
               <li>
-                <a href={"tel:" + { contactNo }}>{contactNo}</a>
+                <a href={"tel:" + { contactNo }}>{contactNoTitle}</a>
               </li>
               <li>
                 <a href={"mailto:" + { email }}>{email}</a>
