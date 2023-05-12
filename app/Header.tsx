@@ -26,9 +26,9 @@ export default function Header() {
     <header className={isSticky ? "sticky" : ""}>
       <a href="#" className="logo"></a>
       <div
-        className={isOpen ? "bx bx-menu " : "bx bx-x "}
+        className={isOpen ? "bx bx-x" : "bx bx-menu"}
         id="menu-icon"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleClick}
       ></div>
 
       <ul className={"navbar " + (isOpen ? "open " : "")}>

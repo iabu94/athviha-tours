@@ -1,5 +1,14 @@
 export default function Footer() {
-  const mobileNum = process.env.CONTACT_NO;
+  const name = process.env.NAME;
+  const address = process.env.ADDRESS;
+  const email = process.env.EMAIL;
+  const fbLink = process.env.FB_LINK;
+  const fbTitle = process.env.FB_TITLE;
+  const instaLink = process.env.INSTA_LINK;
+  const twitterLink = process.env.TWITTER_LINK;
+  const linkedinLink = process.env.LINKEDIN_LINK;
+  const contactNo = process.env.CONTACT_NO;
+
   return (
     <section id="contact">
       <div className="footer">
@@ -29,25 +38,20 @@ export default function Footer() {
             <h4>Contact Info</h4>
             <ul>
               <li>
-                <a href="#home">Athviha Tours</a>
+                <a href="#home">{name}</a>
               </li>
               <li>
-                <a href="#home">Talawakelle, Sri Lanka</a>
+                <a href="#home">{address}</a>
               </li>
               <li>
-                <a href={"tel:" + { mobileNum }}>{mobileNum}</a>
+                <a href={"tel:" + { contactNo }}>{contactNo}</a>
               </li>
               <li>
-                <a href="mailto:athvihatours@gmail.com">
-                  athvihatours@gmail.com
-                </a>
+                <a href={"mailto:" + { email }}>{email}</a>
               </li>
               <li>
-                <a
-                  href="https://www.facebook.com/athvihatourslk"
-                  target="_blank"
-                >
-                  www.facebookcom/athvihatourslk
+                <a href={fbLink} target="_blank">
+                  {fbTitle}
                 </a>
               </li>
             </ul>
@@ -56,16 +60,16 @@ export default function Footer() {
           <div className="list">
             <h4>Connect</h4>
             <div className="social">
-              <a href="https://www.facebook.com/athvihatourslk" target="_blank">
+              <a href={fbLink} target="_blank">
                 <i className="bx bxl-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/athvihatours/" target="_blank">
+              <a href={instaLink} target="_blank">
                 <i className="bx bxl-instagram-alt"></i>
               </a>
-              <a href="https://www.facebook.com/athvihatourslk" target="_blank">
+              <a href={twitterLink} target="_blank">
                 <i className="bx bxl-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/athvihatours/" target="_blank">
+              <a href={linkedinLink} target="_blank">
                 <i className="bx bxl-linkedin"></i>
               </a>
             </div>
