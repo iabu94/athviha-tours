@@ -1,4 +1,5 @@
 export default function Footer() {
+  const mobileNum = process.env.CONTACT_NO;
   return (
     <section id="contact">
       <div className="footer">
@@ -34,7 +35,7 @@ export default function Footer() {
                 <a href="#home">Talawakelle, Sri Lanka</a>
               </li>
               <li>
-                <a href="tel:+94702671937">+9470 267 1937</a>
+                <a href={"tel:" + { mobileNum }}>{mobileNum}</a>
               </li>
               <li>
                 <a href="mailto:athvihatours@gmail.com">
