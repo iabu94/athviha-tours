@@ -1,13 +1,14 @@
 export default function Footer() {
   const name = process.env.NAME;
   const address = process.env.ADDRESS;
-  const email = process.env.EMAIL;
+  const email = `mailto:${process.env.EMAIL}`;
+  const emailTitle = process.env.EMAIL;
   const fbLink = process.env.FB_LINK;
   const fbTitle = process.env.FB_TITLE;
   const instaLink = process.env.INSTA_LINK;
   const twitterLink = process.env.TWITTER_LINK;
   const linkedinLink = process.env.LINKEDIN_LINK;
-  const contactNo = process.env.CONTACT_NO;
+  const contactNo = `tel:${process.env.CONTACT_NO}`;
   const contactNoTitle = process.env.CONTACT_NO_TITLE;
 
   return (
@@ -45,10 +46,10 @@ export default function Footer() {
                 <a href="#home">{address}</a>
               </li>
               <li>
-                <a href={"tel:" + { contactNo }}>{contactNoTitle}</a>
+                <a href={contactNo}>{contactNoTitle}</a>
               </li>
               <li>
-                <a href={"mailto:" + { email }}>{email}</a>
+                <a href={email}>{emailTitle}</a>
               </li>
               <li>
                 <a href={fbLink} target="_blank">
